@@ -3,7 +3,7 @@ TranslatedAttributes
 
 Translated attributes is a basic plugin that allows you to support multiple languages in your model in simpler way that globalize2 does.
 
-It's dependent on I18n, so use it with Rails edge.
+It's dependent on Rails' I18n, so use it with Rails 2.2 - for now Rails edge.
 
 How to use:
 -----------
@@ -26,6 +26,8 @@ Model:
 
 View/Controller
   @post = Post.first
-  post.title('en') #=> post.title_en
-  post.title('ar') #=> post.title_ar
+  I18n.locale = 'en'
+  post.title #=> post.title_en
+  I18n.locale = 'ar'
+  post.title #=> post.title_ar
   
