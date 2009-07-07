@@ -19,7 +19,7 @@ Migration:
 Model:
 
   class Post < ActiveRecord::Base
-    translated_attributes :title, :body
+    translated_attributes
   end
 
 View/Controller
